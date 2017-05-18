@@ -4,9 +4,11 @@ GUIController c;
 IFButton b1, b2;
 IFLabel l;
 
+color background;
+
 void setup() {
   size(200, 100);
-  background(200);
+  background = 200;
   
   c = new GUIController (this);
   
@@ -21,13 +23,14 @@ void setup() {
 }
 
 void draw() {
+background(background);
 
 }
 
 void actionPerformed (GUIEvent e) {
   if (e.getSource() == b1) {
-    background(100, 155, 100);
+    background = color(100, 155, 100);
   } else if (e.getSource() == b2) {
-    background(100, 100, 130);
+    background = color(100, 100, 130);
   }
 }
